@@ -328,7 +328,6 @@ let escrow_transfer = new Serializer(
     "escrow_transfer", {
     from: string,
     to: string,
-    sbd_amount: asset,
     steem_amount: asset,
     escrow_id: uint32,
     agent: string,
@@ -357,7 +356,6 @@ let escrow_release = new Serializer(
     who: string,
     receiver: string,
     escrow_id: uint32,
-    sbd_amount: asset,
     steem_amount: asset
 }
 );

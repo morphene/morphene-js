@@ -75,10 +75,6 @@ operations.forEach((operation) => {
   const operationName = camelCase(operation.operation);
   const operationParams = operation.params || [];
 
-  const useCommentPermlink =
-    operationParams.indexOf('parent_permlink') !== -1 &&
-    operationParams.indexOf('parent_permlink') !== -1;
-
   steemBroadcast[`${operationName}With`] =
     function steemBroadcast$specializedSendWith(wif, options, callback) {
       debug(`Sending operation "${operationName}" with`, {options, callback});
@@ -90,13 +86,7 @@ operations.forEach((operation) => {
         extensions: [],
         operations: [[operation.operation, Object.assign(
           {},
-          options,
-          options.json_metadata != null ? {
-            json_metadata: toString(options.json_metadata),
-          } : {},
-          useCommentPermlink && options.permlink == null ? {
-            permlink: formatter.commentPermlink(options.parent_author, options.parent_permlink),
-          } : {}
+          options
         )]],
       }, keys, callback);
     };
