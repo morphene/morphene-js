@@ -1,6 +1,6 @@
 FROM node:4
-ADD ./package.json /morphenejs/package.json
-WORKDIR /morphenejs
+ADD ./package.json /morphene-js/package.json
+WORKDIR /morphene-js
 RUN npm install
-ADD . /morphenejs
+ADD . /morphene-js
 RUN npm test

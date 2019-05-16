@@ -5,7 +5,7 @@ const config = require("./config");
 const formatter = require("./formatter")(api);
 const utils = require("./utils");
 
-const morphene = {
+const morpheneJS = {
   api,
   auth,
   broadcast,
@@ -15,11 +15,11 @@ const morphene = {
 };
 
 if (typeof window !== "undefined") {
-  window.morphene = morphene;
+  window.morpheneJS = morpheneJS;
 }
 
 if (typeof global !== "undefined") {
-  global.morphene = morphene;
+  global.morpheneJS = morpheneJS;
 }
 
-exports = module.exports = morphene;
+exports = module.exports = morpheneJS;
