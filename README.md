@@ -25,7 +25,7 @@ https://github.com/morphene/morphene-js/tree/master/doc
 
 ## Browser
 ```html
-<script src="./morpheneJS.min.js"></script>
+<script src="./morphene-js.min.js"></script>
 <script>
 morpheneJS.api.getAccounts(['initwitness'], function(err, response){
     console.log(err, response);
@@ -36,7 +36,7 @@ morpheneJS.api.getAccounts(['initwitness'], function(err, response){
 ## Server
 ## Install
 ```
-$ npm install morpheneJS --save
+$ npm install @boone-development/morphene-js --save
 ```
 
 ## RPC Servers

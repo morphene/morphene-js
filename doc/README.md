@@ -18,12 +18,12 @@
 
 # Install
 ```
-$ npm install morpheneJS --save
+$ npm install @boone-development/morphene-js --save
 ```
 
 # Browser 
 ```html 
-<script src="./morpheneJS.min.js"></script>
+<script src="./morphene-js.min.js"></script>
 <script>
 morpheneJS.api.getAccounts(['initwitness'], function(err, response){
     console.log(err, response);
