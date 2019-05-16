@@ -432,17 +432,17 @@ export default [
       "params": ["blogAccount"]
     },
     {
-      "api": "network_broadcast_api",
+      "api": "database_api",
       "method": "broadcast_transaction",
       "params": ["trx"]
     },
     {
-      "api": "network_broadcast_api",
+      "api": "database_api",
       "method": "broadcast_transaction_with_callback",
       "params": ["confirmationCallback", "trx"]
     },
     {
-      "api": "network_broadcast_api",
+      "api": "database_api",
       "method": "broadcast_transaction_synchronous",
       "params": ["trx"]
     },
@@ -491,5 +491,15 @@ export default [
       "api": "market_history_api",
       "method": "get_market_history_buckets",
       "params": []
+    },
+    {
+      "api": "database_api",
+      "method": "get_auction",
+      "params": ["permlink"]
+    },
+    {
+      "api": "database_api",
+      "method": "get_auctions_by_status",
+      "params": ["status", "limit"]
     }
 ];

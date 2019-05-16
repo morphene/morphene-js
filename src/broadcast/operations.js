@@ -1,28 +1,5 @@
 module.exports = [
   {
-    "roles": ["posting", "active", "owner"],
-    "operation": "vote",
-    "params": [
-      "voter",
-      "author",
-      "permlink",
-      "weight"
-    ]
-  },
-  {
-    "roles": ["posting", "active", "owner"],
-    "operation": "comment",
-    "params": [
-      "parent_author",
-      "parent_permlink",
-      "author",
-      "permlink",
-      "title",
-      "body",
-      "json_metadata"
-    ]
-  },
-  {
     "roles": ["active", "owner"],
     "operation": "transfer",
     "params": [
@@ -47,51 +24,6 @@ module.exports = [
     "params": [
       "account",
       "vesting_shares"
-    ]
-  },
-  {
-    "roles": ["active", "owner"],
-    "operation": "limit_order_create",
-    "params": [
-      "owner",
-      "orderid",
-      "amount_to_sell",
-      "min_to_receive",
-      "fill_or_kill",
-      "expiration"
-    ]
-  },
-  {
-    "roles": ["active", "owner"],
-    "operation": "limit_order_cancel",
-    "params": [
-      "owner",
-      "orderid"
-    ]
-  },
-  {
-    "roles": ["active", "owner"],
-    "operation": "price",
-    "params": [
-      "base",
-      "quote"
-    ]
-  },
-  {
-    "roles": ["active", "owner"],
-    "operation": "feed_publish",
-    "params": [
-      "publisher",
-      "exchange_rate"
-    ]
-  },
-  {
-    "roles": ["active", "owner"],
-    "operation": "convert",
-    "params": [
-      "owner",
-      "requestid",
-      "amount"
     ]
   },
   {
@@ -169,33 +101,12 @@ module.exports = [
   },
   {
     "roles": ["posting", "active", "owner"],
-    "operation": "delete_comment",
-    "params": [
-      "author",
-      "permlink"
-    ]
-  },
-  {
-    "roles": ["posting", "active", "owner"],
     "operation": "custom_json",
     "params": [
       "required_auths",
       "required_posting_auths",
       "id",
       "json"
-    ]
-  },
-  {
-    "roles": ["posting", "active", "owner"],
-    "operation": "comment_options",
-    "params": [
-      "author",
-      "permlink",
-      "max_accepted_payout",
-      "percent_steem_dollars",
-      "allow_votes",
-      "allow_curation_rewards",
-      "extensions"
     ]
   },
   {
@@ -206,18 +117,6 @@ module.exports = [
       "to_account",
       "percent",
       "auto_vest"
-    ]
-  },
-  {
-    "roles": ["active", "owner"],
-    "operation": "limit_order_create2",
-    "params": [
-      "owner",
-      "orderid",
-      "amount_to_sell",
-      "exchange_rate",
-      "fill_or_kill",
-      "expiration"
     ]
   },
   {
@@ -315,14 +214,6 @@ module.exports = [
   },
   {
     "roles": ["active", "owner"],
-    "operation": "pow2",
-    "params": [
-      "input",
-      "pow_summary"
-    ]
-  },
-  {
-    "roles": ["active", "owner"],
     "operation": "escrow_approve",
     "params": [
       "from",
@@ -334,48 +225,11 @@ module.exports = [
     ]
   },
   {
-    "roles": ["active", "owner"],
-    "operation": "transfer_to_savings",
-    "params": [
-      "from",
-      "to",
-      "amount",
-      "memo"
-    ]
-  },
-  {
-    "roles": ["active", "owner"],
-    "operation": "transfer_from_savings",
-    "params": [
-      "from",
-      "request_id",
-      "to",
-      "amount",
-      "memo"
-    ]
-  },
-  {
-    "roles": ["active", "owner"],
-    "operation": "cancel_transfer_from_savings",
-    "params": [
-      "from",
-      "request_id"
-    ]
-  },
-  {
     "roles": ["posting", "active", "owner"],
     "operation": "custom_binary",
     "params": [
       "id",
       "data"
-    ]
-  },
-  {
-    "roles": ["owner"],
-    "operation": "decline_voting_rights",
-    "params": [
-      "account",
-      "decline"
     ]
   },
   {
@@ -394,16 +248,6 @@ module.exports = [
       "account",
       "current_reset_account",
       "reset_account"
-    ]
-  },
-  {
-    "roles": ["posting", "active", "owner"],
-    "operation": "claim_reward_balance",
-    "params": [
-      "account",
-      "reward_steem",
-      "reward_sbd",
-      "reward_vests"
     ]
   },
   {
@@ -432,38 +276,52 @@ module.exports = [
     ]
   },
   {
-    "roles": ["active", "owner"],
-    "operation": "fill_convert_request",
+    "roles": ["posting"],
+    "operation": "witness_set_properties",
     "params": [
       "owner",
-      "requestid",
-      "amount_in",
-      "amount_out"
+      "url",
+      "block_signing_key",
+      "props",
+      "fee"
     ]
   },
   {
-    "roles": ["posting", "active", "owner"],
-    "operation": "comment_reward",
+    "roles": ["active", "owner"],
+    "operation": "create_auction",
     "params": [
-      "author",
+      "consigner",
       "permlink",
-      "payout"
+      "start_time",
+      "end_time",
+      "fee"
     ]
   },
   {
     "roles": ["active", "owner"],
-    "operation": "liquidity_reward",
+    "operation": "update_auction",
     "params": [
-      "owner",
-      "payout"
+      "consigner",
+      "permlink",
+      "start_time",
+      "end_time",
+      "fee"
     ]
   },
   {
     "roles": ["active", "owner"],
-    "operation": "interest",
+    "operation": "delete_auction",
     "params": [
-      "owner",
-      "interest"
+      "consigner",
+      "permlink"
+    ]
+  },
+  {
+    "roles": ["active", "owner"],
+    "operation": "place_bid",
+    "params": [
+      "bidder",
+      "permlink"
     ]
   },
   {
@@ -474,29 +332,6 @@ module.exports = [
       "to_account",
       "withdrawn",
       "deposited"
-    ]
-  },
-  {
-    "roles": ["posting", "active", "owner"],
-    "operation": "fill_order",
-    "params": [
-      "current_owner",
-      "current_orderid",
-      "current_pays",
-      "open_owner",
-      "open_orderid",
-      "open_pays"
-    ]
-  },
-  {
-    "roles": ["posting", "active", "owner"],
-    "operation": "fill_transfer_from_savings",
-    "params": [
-      "from",
-      "to",
-      "amount",
-      "request_id",
-      "memo"
     ]
   }
 ];

@@ -1,7 +1,7 @@
 {
-  "name": "@steemit/steem-js",
-  "version": "0.7.5",
-  "description": "Steem.js the JavaScript API for Steem blockchain",
+  "name": "morphene-js",
+  "version": "0.0.1",
+  "description": "Morphene.js the JavaScript API for Morphene blockchain",
   "main": "lib/index.js",
   "scripts": {
     "test": "eslint --quiet src test; mocha -t 40000 --require babel-polyfill --require babel-register",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/steemit/steem-js.git"
+    "url": "git+https://github.com/morphene/morphene-js.git"
   },
   "keywords": [
     "steem",
@@ -25,12 +25,12 @@
     "blockchain",
     "steemjs"
   ],
-  "author": "Fabien (https://github.com/bonustrack)",
+  "author": "Netuoso (https://github.com/netuoso)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/steemit/steem-js/issues"
+    "url": "https://github.com/morphene/morphene-js/issues"
   },
-  "homepage": "https://github.com/steemit/steem-js#readme",
+  "homepage": "https://github.com/morphene/morphene-js#readme",
   "dependencies": {
     "@steemit/rpc-auth": "^1.1.1",
     "bigi": "^1.4.2",
@@ -72,9 +72,6 @@
     "webpack-visualizer-plugin": "^0.1.5"
   },
   "contributors": [
-    "Fabien (https://github.com/bonustrack)",
-    "James Calfee (https://github.com/jcalfee)",
-    "Nilesh Suthar (https://github.com/nil1511)",
-    "Pedro Tacla Yamada (https://github.com/yamadapc)"
+    "Netuoso (https://github.com/netuoso)"
   ]
 }

@@ -146,6 +146,15 @@ class Steem extends EventEmitter {
                 }
             }
         }
+        // fixme: kind of hacky but fixes tx formatting for broadcast
+        if(data.method === "broadcast_transaction_synchronous") {
+            var ops = data.params[0].operations;
+            var formattedOps = [];
+            for(var i=0;ops.length>i;i++) {
+                formattedOps.push({"type":`${ops[i][0]}_operation`, "value": ops[i][1]})
+            }
+            data.params[0].operations = formattedOps
+        }
         return this.transport.send(api, data, cb);
     }
 
