@@ -1,13 +1,13 @@
 
-// This file is merge updated from steemd's js_operation_serializer program.
+// This file is merge updated from morphened's js_operation_serializer program.
 /*
 
 ./js_operation_serializer |
 sed 's/void/future_extensions/g'|
-sed 's/steemit_protocol:://g'|
+sed 's/morphene_protocol:://g'|
 sed 's/14static_variantIJNS_12fixed_stringINSt3__14pairIyyEEEEEEE/string/g'|
-sed 's/steemit_future_extensions/future_extensions/g'|
-sed 's/steemit_protocol_//g' > tmp.coffee
+sed 's/morphene_future_extensions/future_extensions/g'|
+sed 's/morphene_protocol_//g' > tmp.coffee
 
 */
 // coffee tmp.coffee # fix errors until you see: `ChainTypes is not defined`
@@ -328,7 +328,7 @@ let escrow_transfer = new Serializer(
     "escrow_transfer", {
     from: string,
     to: string,
-    steem_amount: asset,
+    morph_amount: asset,
     escrow_id: uint32,
     agent: string,
     fee: asset,
@@ -356,7 +356,7 @@ let escrow_release = new Serializer(
     who: string,
     receiver: string,
     escrow_id: uint32,
-    steem_amount: asset
+    morph_amount: asset
 }
 );
 
@@ -542,10 +542,3 @@ const encrypted_memo = new Serializer(
     check: uint32,
     encrypted: string_binary}
 );
-/*
-
-// Make sure all tests pass
-
-npm test
-
-*/

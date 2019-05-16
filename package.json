@@ -1,11 +1,9 @@
 {
-  "name": "morphene-js",
-  "version": "0.0.1",
+  "name": "@boone-development/morphene-js",
+  "version": "0.1.0",
   "description": "Morphene.js the JavaScript API for Morphene blockchain",
   "main": "lib/index.js",
   "scripts": {
-    "test": "eslint --quiet src test; mocha -t 40000 --require babel-polyfill --require babel-register",
-    "test-auth": "npm test -- --grep 'steem.auth'",
     "build": "npm run build-browser && npm run build-node",
     "build-browser": "rm -rf dist && NODE_ENV=production node ./node_modules/webpack/bin/webpack.js && gzip -k -f ./dist/*.js && du -h ./dist/*",
     "build-node": "mkdir -p ./lib && cp -r ./src/* ./lib/ && babel ./src --out-dir ./lib",
@@ -20,10 +18,9 @@
     "url": "git+https://github.com/morphene/morphene-js.git"
   },
   "keywords": [
-    "steem",
-    "steemit",
+    "morphene",
     "blockchain",
-    "steemjs"
+    "morphene-js"
   ],
   "author": "Netuoso (https://github.com/netuoso)",
   "license": "MIT",
@@ -73,5 +70,10 @@
   },
   "contributors": [
     "Netuoso (https://github.com/netuoso)"
-  ]
+  ],
+  "directories": {
+    "doc": "doc",
+    "example": "examples",
+    "lib": "lib"
+  }
 }

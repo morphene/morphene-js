@@ -179,7 +179,7 @@ module.exports = [
       "to",
       "agent",
       "escrow_id",
-      "steem_amount",
+      "morph_amount",
       "fee",
       "ratification_deadline",
       "escrow_expiration",
@@ -207,7 +207,7 @@ module.exports = [
       "who",
       "receiver",
       "escrow_id",
-      "steem_amount"
+      "morph_amount"
     ]
   },
   {

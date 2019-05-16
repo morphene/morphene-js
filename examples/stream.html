@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Steem.js Stream</title>
+  <title>Morphene.js Stream</title>
 </head>
 <body>
 
-<script src="../dist/steem.min.js"></script>
+<script src="../dist/morpheneJS.min.js"></script>
 <script>
-steem.api.streamOperations(function (err, operations) {
+morpheneJS.api.streamOperations(function (err, operations) {
   operations.forEach(function (operation) {
     console.log(operation);
   });

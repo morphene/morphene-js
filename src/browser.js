@@ -5,7 +5,7 @@ const config = require("./config");
 const formatter = require("./formatter")(api);
 const utils = require("./utils");
 
-const steem = {
+const morphene = {
   api,
   auth,
   broadcast,
@@ -15,11 +15,11 @@ const steem = {
 };
 
 if (typeof window !== "undefined") {
-  window.steem = steem;
+  window.morphene = morphene;
 }
 
 if (typeof global !== "undefined") {
-  global.steem = steem;
+  global.morphene = morphene;
 }
 
-exports = module.exports = steem;
+exports = module.exports = morphene;

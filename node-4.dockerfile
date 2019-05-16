@@ -1,6 +1,6 @@
 FROM node:4
-ADD ./package.json /steemjs/package.json
-WORKDIR /steemjs
+ADD ./package.json /morphenejs/package.json
+WORKDIR /morphenejs
 RUN npm install
-ADD . /steemjs
+ADD . /morphenejs
 RUN npm test

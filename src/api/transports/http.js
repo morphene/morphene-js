@@ -3,7 +3,7 @@ import newDebug from 'debug';
 import retry from 'retry';
 import Transport from './base';
 
-const debug = newDebug('steem:http');
+const debug = newDebug('morphene:http');
 
 class RPCError extends Error {
   constructor(rpcError) {
@@ -53,7 +53,7 @@ export function jsonRpc(uri, {method, id, params, fetchMethod=fetch}) {
 
 export default class HttpTransport extends Transport {
   send(api, data, callback) {
-    debug('Steem::send', api, data);
+    debug('Morphene::send', api, data);
     const id = data.id || this.id++;
     const params = [api, data.method, data.params];
     const retriable = this.retriable(api, data);
