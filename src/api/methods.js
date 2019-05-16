@@ -207,5 +207,10 @@ export default [
       "api": "database_api",
       "method": "get_auctions_by_status",
       "params": ["status", "limit"]
+    },
+    {
+      "api": "database_api",
+      "method": "get_bids",
+      "params": ["permlink", "limit"]
     }
 ];

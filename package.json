@@ -1,6 +1,6 @@
 {
   "name": "@boone-development/morphene-js",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Morphene.js the JavaScript API for Morphene blockchain",
   "main": "lib/index.js",
   "scripts": {
