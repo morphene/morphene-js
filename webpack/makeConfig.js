@@ -72,7 +72,7 @@ function makeConfig(options) {
   return {
     devtool: isDevelopment ? 'cheap-eval-source-map' : 'source-map',
     entry: {
-      steem: path.join(options.baseDir, 'src/browser.js')
+      "morphene-js": path.join(options.baseDir, 'src/browser.js')
     },
     output: {
       path: path.join(options.baseDir, 'dist'),
