@@ -1,10 +1,10 @@
 {
   "transport": "http",
-  "websocket": "ws://localhost:8090",
-  "uri": "http://localhost:8090",
+  "websocket": "wss://morphene.io/rpc",
+  "uri": "https://morphene.io/rpc",
   "url": "",
-  "dev_uri": "http://localhost:8090",
-  "stage_uri": "http://localhost:8090",
-  "address_prefix": "TST",
-  "chain_id": "720fc3f4eb2480c104539739bd9cb84db9e92c3a63cdf78254887d5ac2978a2f"
+  "dev_uri": "https://morphene.io/rpc",
+  "stage_uri": "https://morphene.io/rpc",
+  "address_prefix": "MPH",
+  "chain_id": "f6f3128028d95bdc9cd47c3b27e3ebae4bee456bc3ce11d37492b828de2e2f59"
 }

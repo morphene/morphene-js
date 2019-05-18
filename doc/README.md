@@ -34,7 +34,7 @@ morpheneJS.api.getAccounts(['initwitness'], function(err, response){
 ## JSON-RPC
 Here is how to activate JSON-RPC transport:
 ```js
-morpheneJS.api.setOptions({ url: 'http://localhost:8090' });
+morpheneJS.api.setOptions({ url: 'https://morphene.io/rpc' });
 ```
 
 # API
