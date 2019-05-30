@@ -92,25 +92,6 @@ module.exports = [
   },
   {
     "roles": ["active", "owner"],
-    "operation": "custom",
-    "params": [
-      "required_auths",
-      "id",
-      "data"
-    ]
-  },
-  {
-    "roles": ["posting", "active", "owner"],
-    "operation": "custom_json",
-    "params": [
-      "required_auths",
-      "required_posting_auths",
-      "id",
-      "json"
-    ]
-  },
-  {
-    "roles": ["active", "owner"],
     "operation": "set_withdraw_vesting_route",
     "params": [
       "from_account",
@@ -220,14 +201,6 @@ module.exports = [
       "who",
       "escrow_id",
       "approve"
-    ]
-  },
-  {
-    "roles": ["posting", "active", "owner"],
-    "operation": "custom_binary",
-    "params": [
-      "id",
-      "data"
     ]
   },
   {

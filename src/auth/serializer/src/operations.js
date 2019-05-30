@@ -231,34 +231,6 @@ let account_witness_proxy = new Serializer(
 }
 );
 
-let custom = new Serializer( 
-    "custom", {
-    required_auths: set(string),
-    id: uint16,
-    data: bytes()
-}
-);
-
-let custom_json = new Serializer( 
-    "custom_json", {
-    required_auths: set(string),
-    required_posting_auths: set(string),
-    id: string,
-    json: string
-}
-);
-
-let custom_binary = new Serializer( 
-    "custom_binary", {
-    required_owner_auths: set(string),
-    required_active_auths: set(string),
-    required_posting_auths: set(string),
-    required_auths: array(authority),
-    id: string,
-    data: bytes()
-}
-);
-
 let pow = new Serializer( 
     "pow", {
     worker: public_key,
@@ -489,9 +461,6 @@ operation.st_operations = [
     witness_update,
     account_witness_vote,
     account_witness_proxy,
-    custom,
-    custom_json,
-    custom_binary,
     pow,
     set_withdraw_vesting_route,
     claim_account,

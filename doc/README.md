@@ -322,23 +322,6 @@ morpheneJS.broadcast.changeRecoveryAccount(wif, accountToRecover, newRecoveryAcc
   console.log(err, result);
 });
 ```
-### Custom
-```
-morpheneJS.broadcast.custom(wif, requiredAuths, id, data, function(err, result) {
-  console.log(err, result);
-});
-```
-### Custom Binary
-```
-morpheneJS.broadcast.customBinary(wif, id, data, function(err, result) {
-  console.log(err, result);
-});
-```
-### Custom Json
-```
-morpheneJS.broadcast.customJson(wif, requiredAuths, requiredPostingAuths, id, json, function(err, result) {
-  console.log(err, result);
-});
 ```
 ### Escrow Dispute
 ```
